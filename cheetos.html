@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lay's | The Real Crunch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lexend:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100vh; overflow: hidden; font-family: 'Lexend', sans-serif; background: #f9d71c; }
+
+        .lays-wrapper {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Background par Chips ka texture hai */
+            background: linear-gradient(rgba(249, 215, 28, 0.8), rgba(249, 215, 28, 0.8)), 
+                        url('https://images.unsplash.com/photo-1566478989037-eec170784d0b?q=80&w=2070') no-repeat center center/cover;
+            padding: 20px;
+        }
+
+        .main-card {
+            width: 95%;
+            max-width: 1100px;
+            height: 80vh;
+            background: #fff;
+            border-radius: 50px;
+            display: flex;
+            box-shadow: 0 40px 100px rgba(214, 40, 40, 0.2);
+            overflow: hidden;
+            border: 5px solid #d62828;
+            position: relative;
+        }
+
+        /* Left Side: Bold Content */
+        .info-panel {
+            flex: 1;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 5;
+        }
+
+        h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 5.5rem;
+            line-height: 0.9;
+            color: #212121;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #d62828;
+            display: block;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+            max-width: 400px;
+        }
+
+        .crunch-btn {
+            padding: 20px 50px;
+            background: #d62828;
+            color: white;
+            text-decoration: none;
+            border-radius: 100px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            width: fit-content;
+            box-shadow: 0 10px 30px rgba(214, 40, 40, 0.4);
+        }
+
+        .crunch-btn:hover {
+            background: #f9d71c;
+            color: #d62828;
+            transform: scale(1.1) rotate(-3deg);
+        }
+
+        /* Right Side: Lay's Specific Photo */
+        .visual-panel {
+            flex: 1.2;
+            position: relative;
+            background: #fffdf0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .lays-pic {
+            width: 110%;
+            height: 110%;
+            /* Specific Lay's Style chips pic */
+            background: url('https://images.unsplash.com/photo-1566478989037-eec170784d0b?q=80&w=2070') no-repeat center center/cover;
+            transition: 1s ease-in-out;
+        }
+
+        .main-card:hover .lays-pic {
+            transform: scale(1.15) rotate(2deg);
+        }
+
+        .badge-red {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background: #d62828;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-weight: 900;
+            font-size: 0.8rem;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transform: rotate(15deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lays-wrapper">
+        <div class="main-card">
+            <!-- Information -->
+            <div class="info-panel">
+                <h1>Always <br><span>Crispy.</span></h1>
+                <p>Enjoy the classic taste of Lay's. Carefully selected potatoes, sliced perfectly and fried to a golden crunch.</p>
+                <a href="#" class="crunch-btn">Shop Now</a>
+            </div>
+
+            <!-- Lay's Specific Visual -->
+            <div class="visual-panel">
+                <div class="lays-pic"></div>
+                <div class="badge-red">FRESH PACK</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
